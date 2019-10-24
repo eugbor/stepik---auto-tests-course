@@ -12,7 +12,7 @@ def browser(request):
     options = Options()
     options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
     print("\nstart browser for test..")
-    browser = webdriver.Chrome(executable_path="/usr/lib/chromium-browser/chromedriver",options=options)
+    browser = webdriver.Chrome(executable_path="/usr/lib/chromium-browser/chromedriver", options=options)
     browser.implicitly_wait(5)
     yield browser
     print("\nquit browser..")
